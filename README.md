@@ -11,8 +11,8 @@ a little sprint review for you ♥️
 ## We will be building a project that follows these guidlines
 
 - [ ] a `store` can have multiple `gorceries` 
-- [ ] a `grocery` belongs to only one `store`
-- [ ] a `store` can use multiple `supplies` Example of some `supplies` would be: reusable grocery bags, cart, grocery list, pen
+- [ ] a `grocery` belongs to only one `store` - one to one relationship
+- [ ] a `store` can use multiple `supplies` Example of some `supplies` would be: reusable grocery bags, cart, grocery list, pen - one to many relationship 
 - [ ] the same `supplies` can be used in mulitple `stores`
 - [ ] when adding a `grocery` the client must provide a `id` of an existing `store`
 
