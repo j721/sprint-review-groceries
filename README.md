@@ -5,7 +5,7 @@ a little sprint review for you ♥️
 
 - [ ] fork & clone this project 
 - [ ] `cd` into your project 
-- [ ] create your own branch name - `firstname-lastname`
+- [ ] create your own branch - `firstname-lastname`
 - [ ] `npm i` to get all node dependencies 
 
 ## We will be building a project that follows these guidlines
