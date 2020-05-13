@@ -17,9 +17,9 @@ a little sprint review for you ♥️
 - [ ] when adding a `grocery` the client must provide a `id` of an existing `store`
 
 ## Schema 
-** please follow this schema when building your db tables **
+**please follow this schema when building your db tables**
 
-| tables | requirements | entities
+| Table Names | Requirements | Entities
 | ------- | ---- | ---------- |
 | store  | name | unique ID(integer), name(string), location(string), completed(boolean)  |
 | gorceries | store_id, name | unique ID(integer), store_id(matches with store ID, integer) name(string), completed(boolean)  |
