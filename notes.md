@@ -1,0 +1,1 @@
+just a little notes file to keep some good tips 😊
