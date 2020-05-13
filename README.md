@@ -1,7 +1,7 @@
 # sprint-review-groceries
 a little sprint review for you ♥️
 
-## Welcome developers! Please follow the steps to get started 👇
+## Welcome developers! Please follow these steps to get started 👇
 
 - [ ] fork & clone this project 
 - [ ] `cd` into your project 
