@@ -3,7 +3,7 @@ a little sprint review for you ♥️
 
 ## Welcome developers! Please follow the steps to get started 👇
 
-- [ ] clone this project 
+- [ ] fork & clone this project 
 - [ ] `cd` into your project 
 - [ ] create your own branch name - `firstname-lastname`
 - [ ] `npm i` to get all node dependencies 
