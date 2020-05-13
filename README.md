@@ -20,7 +20,7 @@ a little sprint review for you ♥️
 **please follow this schema when building your db tables**
 
 | Table Names | Requirements | Entities
-| ------- | ---- | ---------- |
+| -------------- | ---------- | ------------------ |
 | store  | name | unique ID(integer), name(string), location(string), completed(boolean)  |
 | gorceries | store_id, name | unique ID(integer), store_id(matches with store ID in the store table, integer) name(string), completed(boolean)  |
 | supplies | store_id, name | unique ID(integer), store_id(matches with store ID in the store table, integer), name(string), in_use(boolean) |
