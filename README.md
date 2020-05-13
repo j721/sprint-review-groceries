@@ -18,6 +18,7 @@ a little sprint review for you ♥️
 
 ## Schema 
 **please follow this schema when building your db tables**
+**as you build these tables, think about the relationships between them**
 
 | Table Names | Requirements | Entities
 | -------------- | ---------- | ------------------ |
@@ -26,5 +27,4 @@ a little sprint review for you ♥️
 | supplies | store_id, name | unique ID(integer), store_id(matches with store ID in the store table, integer), name(string), in_use(boolean) |
 | store_groceries_supplies *a table to combine everything* | store_id, grocery_id, supplies_id | store_id(matches with the store ID in the store table, integer), grocery_id(matches with the grocery ID in the groceries table, integer), supplies_id(matches with the supplies ID in the supplies table) | 
 
-**as you build these tables, think about the relationships between them**
 
