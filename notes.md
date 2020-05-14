@@ -1,6 +1,6 @@
 just a little notes file to keep some good tips 😊
 
-Comands to run  
+Comands to run & steps to follow  
 1. npm init -y
 2. npm i express 
 3. npm i -D nodemon
