@@ -22,7 +22,7 @@ exports.up = function(knex) {
       .notNullable()
       .references('id')
       .inTable('store')
-      .onDelete('RESTRICT')
+      .onDelete('CASCADE')
       .onUpdate('CASCADE');
   })
   .createTable('supplies', tbl => {
@@ -36,7 +36,7 @@ exports.up = function(knex) {
       .unsigned()
       .references('id')
       .inTable('store')
-      .onDelete('RESTRICT')
+      .onDelete('CASCADE')
       .onUpdate('CASCADE');
   })
   .createTable('store_groceries_supplies', tbl => {
@@ -47,21 +47,21 @@ exports.up = function(knex) {
       .unsigned()
       .references('id')
       .inTable('store')
-      .onDelete('RESTRICT')
+      .onDelete('CASCADE')
       .onUpdate('CASCADE');
       // foreign key that points to groceries table 
       tbl.integer('grocery_id')
       .unsigned()
       .references('id')
       .inTable('groceries')
-      .onDelete('RESTRICT')
+      .onDelete('CASCADE')
       .onUpdate('CASCADE');
       // forgeign key that points to supplies table 
       tbl.integer('supplies_id')
       .unsigned()
       .references('id')
       .inTable('supplies')
-      .onDelete('RESTRICT')
+      .onDelete('CASCADE')
       .onUpdate('CASCADE');
   })
 };
