@@ -14,6 +14,6 @@ set up your data folder, set up your dbConfig.js get your knexfile set up make s
 10 knex seed:make 001_cleaner then knex seed:make 002_<first table name> ect. 
 11. after seed data has been added to seed files you can now run knex seed: run
 12. set up your server and index.js 
-13. set up your routes folder
+13. set up your routes folder - add your start and server scripts to package.json
 14. Create your models for each route
 15. create your endpoints for each route (test as you go in postman or insomnia) 
