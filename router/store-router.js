@@ -43,14 +43,22 @@ router.get('/:id', (req, res) => {
 router.get('/:id/connecting', (req, res) => {
     const id = req.params.id;
     Store.getSuppliesForStore(id)
-    .then(all => {
-        res.status(200).json(all);
-    })
-    .catch(err => {
-        res.status(500).json({
-        errMessage: 'Sorry, no information can be found'
-    })
+        .then(all => {
+            res.status(200).json(all);
+        })
+        .catch(err => {
+            res.status(500).json({
+                errMessage: 'Sorry, no information can be found'
+            })
+        })
 })
-})
+
+// some other requests to build out: 
+// GET ALL GROCERIES FOR A SPECIFIC STORE
+// ADD A NEW STORE
+// ADD NEW SUPPLIES - USER MUST PASS IN THE STORE_ID
+// ADD A GROCERY TO A STORE - USER MUST PASS IN STORE_ID
+// DELETE A STORE
+
 
 module.exports = router;
