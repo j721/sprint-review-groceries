@@ -11,7 +11,7 @@ set up your data folder, set up your dbConfig.js get your knexfile set up make s
 7. knex migrate:make <tablename> you can do this all in one or do one for each table (one for each table makes it easier to find where an error is)
 8. set up your tables 
 9. knex migrate: latest (this will create your db3 file to directory you set up in your knexfile)
-10 knex seed:make 001_cleaner then knex seed:make 002_<first table name> ect. 
+10. then npx knex seed:make 02_<first table name> ect. 
 11. after seed data has been added to seed files you can now run knex seed: run
 12. set up your server and index.js 
 13. set up your routes folder - add your start and server scripts to package.json

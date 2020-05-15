@@ -31,7 +31,7 @@ exports.up = function(knex) {
       .notNullable();
       tbl.boolean('in_use')
       .defaultTo(false);
-      // foreign key that references the id in the store table...one to many relationship
+      // foreign key that references the id in the store table...many to many relationship
       tbl.integer('store_id')
       .unsigned()
       .references('id')
