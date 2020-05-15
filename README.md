@@ -30,6 +30,6 @@ a little sprint review for you ♥️
 
 ## Visuals 
 
-**if you would like a drawing of the tables above 👆here is a jamboard I created 😊**
+**if you are a visual learner and would like a drawing of the table connections, here is a jamboard I created 😊 👇**
 
 https://jamboard.google.com/d/1EPeL3jNxmSHUHQtRLilKbhDPObYGKisniUhq9hYy1uo/edit?usp=sharing
