@@ -3,7 +3,7 @@ const db = require('../database/bdConfig.js');
 module.exports = {
     getAllStores,
     getStoreById,
-    getAll
+    getSuppliesForStore
 }
 
 function getAllStores() {
@@ -16,10 +16,11 @@ function getStoreById(id) {
     return query.where('s.id', id).first();
 }
 
-function getAll(id) {
-    return db("store_groceries_supplies")
-    .join('supplies', 'supplies.id', 'store_groceries_supplies.supplies_id')
-    .join('store', 'store.id', 'store_groceries_supplies.store_id')
+// reusable bags is in 1 and 3 - many to many
+function getSuppliesForStore(id) {
+    return db("store_supplies")
+    .join('supplies', 'supplies.id', 'store_supplies.supplies_id')
+    .join('store', 'store.id', 'store_supplies.store_id')
     .select('store.name', 'supplies.name')
-    .where({'store_groceries_supplies.store_id' : id})
+    .where({'store_supplies.store_id' : id})
 }

@@ -1,4 +1,4 @@
-// we need a store, groceries, and supplies table 
+// we need a store, groceries, and supplies table - and a connecting table for many to many relationships
 
 exports.up = function(knex) {
   return knex.schema
@@ -16,7 +16,7 @@ exports.up = function(knex) {
       .notNullable();
       tbl.boolean('completed')
       .defaultTo(false);
-      // foreign key that references the id in the store table...one to many relationship
+      // foreign key that references the id in the store table - one to many relationship
       tbl.integer('store_id') 
       .unsigned() // not negative
       .notNullable()
@@ -31,29 +31,15 @@ exports.up = function(knex) {
       .notNullable();
       tbl.boolean('in_use')
       .defaultTo(false);
-      // foreign key that references the id in the store table...many to many relationship
-      tbl.integer('store_id')
-      .unsigned()
-      .references('id')
-      .inTable('store')
-      .onDelete('CASCADE')
-      .onUpdate('CASCADE');
   })
-  .createTable('store_groceries_supplies', tbl => {
-      // this is the table to combine all of the tables above
+  .createTable('store_supplies', tbl => {
+      // this is the table to combines the store and the supplies table - many to many relationship
       tbl.increments();
       // foreign key that points to store table 
       tbl.integer('store_id')
       .unsigned()
       .references('id')
       .inTable('store')
-      .onDelete('CASCADE')
-      .onUpdate('CASCADE');
-      // foreign key that points to groceries table 
-      tbl.integer('grocery_id')
-      .unsigned()
-      .references('id')
-      .inTable('groceries')
       .onDelete('CASCADE')
       .onUpdate('CASCADE');
       // forgeign key that points to supplies table 
@@ -69,7 +55,7 @@ exports.up = function(knex) {
 exports.down = function(knex) {
    // can't take off your socks without taking off your shoes...put the tables backward
    return knex.schema
-   .dropTableIfExists('store_groceries_supplies')
+   .dropTableIfExists('store_supplies')
    .dropTableIfExists('supplies')
    .dropTableIfExists('groceries')
    .dropTableIfExists('store');

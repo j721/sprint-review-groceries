@@ -39,10 +39,10 @@ router.get('/:id', (req, res) => {
         })
 })
 
-// GET ALL THAT CONNECTS
+// GET ALL SUPPLIES FOR A SPECIFIC STORE
 router.get('/:id/connecting', (req, res) => {
     const id = req.params.id;
-    Store.getAll(id)
+    Store.getSuppliesForStore(id)
     .then(all => {
         res.status(200).json(all);
     })
